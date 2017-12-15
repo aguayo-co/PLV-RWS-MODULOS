@@ -1,0 +1,6 @@
+<?xml version="1.0" ?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Event/etc/events.xsd">
+	<event name="customer_load_after">
+		<observer instance="Prilov\Prilovstore\Observer\Customer\LoadAfter" name="prilov_prilovstore_observer_customer_loadafter_customer_load_after"/>
+	</event>
+</config>
