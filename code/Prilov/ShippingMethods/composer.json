@@ -1,0 +1,25 @@
+{
+    "name": "prilov/module-shippingmethods",
+    "description": "",
+    "license": "proprietary",
+    "authors": [
+        {
+            "name": "Mage2Gen",
+            "email": "info@mage2gen.com"
+        },
+        {
+            "name": "Blas Ruiz",
+            "email": "blas.ruiz@aguayopublicidad.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "Prilov\\ShippingMethods\\": ""
+        },
+        "files": [
+            "registration.php"
+        ]
+    }
+}

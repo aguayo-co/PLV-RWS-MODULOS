@@ -3,9 +3,9 @@
  * Customization
  * Copyright (C) 2017  2017
  * 
- * This file is part of Prilov/Prilovstore.
+ * This file is part of Prilov/Customerpersonalization.
  * 
- * Prilov/Prilovstore is free software: you can redistribute it and/or modify
+ * Prilov/Customerpersonalization is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
  * the Free Software Foundation, either version 3 of the License, or
  * (at your option) any later version.
@@ -19,26 +19,20 @@
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
-namespace Prilov\Prilovstore\Setup;
+namespace Prilov\Customerpersonalization\Observer\Customer;
 
-use Magento\Framework\Setup\UpgradeDataInterface;
-use Magento\Framework\Setup\ModuleContextInterface;
-use Magento\Framework\Setup\ModuleDataSetupInterface;
-
-class UpgradeData implements UpgradeDataInterface
+class LoadAfter implements \Magento\Framework\Event\ObserverInterface
 {
 
     /**
-     * {@inheritdoc}
+     * Execute observer
+     *
+     * @param \Magento\Framework\Event\Observer $observer
+     * @return void
      */
-    public function upgrade(
-        ModuleDataSetupInterface $setup,
-        ModuleContextInterface $context
+    public function execute(
+        \Magento\Framework\Event\Observer $observer
     ) {
-        $setup->startSetup();
-        if (version_compare($context->getVersion(), "2.0.0", "<")) {
-        //Your upgrade script
-        }
-        $setup->endSetup();
+        //Your observer code
     }
 }

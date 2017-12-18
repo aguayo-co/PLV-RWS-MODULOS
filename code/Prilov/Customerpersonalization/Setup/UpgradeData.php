@@ -3,9 +3,9 @@
  * Customization
  * Copyright (C) 2017  2017
  * 
- * This file is part of Prilov/Prilovstore.
+ * This file is part of Prilov/Customerpersonalization.
  * 
- * Prilov/Prilovstore is free software: you can redistribute it and/or modify
+ * Prilov/Customerpersonalization is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
  * the Free Software Foundation, either version 3 of the License, or
  * (at your option) any later version.
@@ -19,25 +19,26 @@
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
-namespace Prilov\Prilovstore\Setup;
+namespace Prilov\Customerpersonalization\Setup;
 
-use Magento\Framework\Setup\InstallSchemaInterface;
+use Magento\Framework\Setup\UpgradeDataInterface;
 use Magento\Framework\Setup\ModuleContextInterface;
-use Magento\Framework\Setup\SchemaSetupInterface;
+use Magento\Framework\Setup\ModuleDataSetupInterface;
 
-class InstallSchema implements InstallSchemaInterface
+class UpgradeData implements UpgradeDataInterface
 {
 
     /**
      * {@inheritdoc}
      */
-    public function install(
-        SchemaSetupInterface $setup,
+    public function upgrade(
+        ModuleDataSetupInterface $setup,
         ModuleContextInterface $context
     ) {
-        $installer = $setup;
-        $installer->startSetup();
-
+        $setup->startSetup();
+        if (version_compare($context->getVersion(), "2.0.0", "<")) {
+        //Your upgrade script
+        }
         $setup->endSetup();
     }
 }

@@ -2,5 +2,10 @@
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Api/etc/extension_attributes.xsd">
 	<extension_attributes for="Magento\Customer\Api\Data\CustomerInterface">
 		<attribute code="mobile_number" type="string"/>
+		<attribute code="score_positive" type="string"/>
+		<attribute code="score_negative" type="string"/>
+		<attribute code="score_neutral" type="string"/>
+		<attribute code="vacations_mode" type="boolean"/>
+		<attribute code="prilov_star" type="boolean"/>
 	</extension_attributes>
 </config>

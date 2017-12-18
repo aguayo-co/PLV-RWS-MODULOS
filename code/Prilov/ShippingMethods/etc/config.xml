@@ -1,0 +1,34 @@
+<?xml version="1.0" ?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd">
+	<default>
+		<carriers>
+			<metodo1>
+				<model>Prilov\ShippingMethods\Model\Carrier\Metodo1</model>
+				<active>0</active>
+				<title>Metodo1</title>
+				<name>Metodo1</name>
+				<price>0.00</price>
+				<specificerrmsg>This shipping method is not available. To use this shipping method, please contact us.</specificerrmsg>
+				<sallowspecific>0</sallowspecific>
+			</metodo1>
+			<metodo2>
+				<model>Prilov\ShippingMethods\Model\Carrier\Metodo2</model>
+				<active>0</active>
+				<title>Metodo2</title>
+				<name>Metodo2</name>
+				<price>0.00</price>
+				<specificerrmsg>This shipping method is not available. To use this shipping method, please contact us.</specificerrmsg>
+				<sallowspecific>0</sallowspecific>
+			</metodo2>
+			<metodo3>
+				<model>Prilov\ShippingMethods\Model\Carrier\Metodo3</model>
+				<active>0</active>
+				<title>Metodo3</title>
+				<name>Metodo3</name>
+				<price>0.00</price>
+				<specificerrmsg>This shipping method is not available. To use this shipping method, please contact us.</specificerrmsg>
+				<sallowspecific>0</sallowspecific>
+			</metodo3>
+		</carriers>
+	</default>
+</config>

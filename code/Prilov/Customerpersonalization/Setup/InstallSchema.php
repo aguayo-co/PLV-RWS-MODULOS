@@ -3,9 +3,9 @@
  * Customization
  * Copyright (C) 2017  2017
  * 
- * This file is part of Prilov/Prilovstore.
+ * This file is part of Prilov/Customerpersonalization.
  * 
- * Prilov/Prilovstore is free software: you can redistribute it and/or modify
+ * Prilov/Customerpersonalization is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
  * the Free Software Foundation, either version 3 of the License, or
  * (at your option) any later version.
@@ -19,20 +19,25 @@
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
-namespace Prilov\Prilovstore\Observer\Customer;
+namespace Prilov\Customerpersonalization\Setup;
 
-class LoadAfter implements \Magento\Framework\Event\ObserverInterface
+use Magento\Framework\Setup\InstallSchemaInterface;
+use Magento\Framework\Setup\ModuleContextInterface;
+use Magento\Framework\Setup\SchemaSetupInterface;
+
+class InstallSchema implements InstallSchemaInterface
 {
 
     /**
-     * Execute observer
-     *
-     * @param \Magento\Framework\Event\Observer $observer
-     * @return void
+     * {@inheritdoc}
      */
-    public function execute(
-        \Magento\Framework\Event\Observer $observer
+    public function install(
+        SchemaSetupInterface $setup,
+        ModuleContextInterface $context
     ) {
-        //Your observer code
+        $installer = $setup;
+        $installer->startSetup();
+
+        $setup->endSetup();
     }
 }
